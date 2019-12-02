@@ -1,0 +1,71 @@
+:root {
+  --desktop: 1440px;
+  --mobile: 375px;
+
+  --primary-color: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+
+  --vlight-grayish-blue: hsl(240, 78%, 98%);
+  --light-grayish-blue: hsl(234, 14%, 74%);
+  --dark-grayish-blue: hsl(232, 13%, 33%);
+  --grayish-blue: hsl(233, 13%, 49%);
+
+  --font: "Montserrat", san-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+}
+
+html {
+  font-family: var(--font);
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  box-sizing: inherit;
+  font-size: 66.67%;
+
+  background-color: var(--vlight-grayish-blue);
+}
+
+body::before {
+  position: fixed;
+  content: "";
+  background: url(images/bg-top.svg);
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 658px;
+}
+
+body::after {
+  position: fixed;
+  content: "";
+  background: url(images/bg-bottom.svg);
+  left: 0;
+  bottom: 0;
+  width: 356px;
+  height: 300px;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  padding: 2rem 0;
+  display: flex;
+
+  justify-content: center;
+}
+
+.heading__title {
+  font-size: 1.9rem;
+  color: var(--grayish-blue);
+}
